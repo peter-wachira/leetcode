@@ -6,6 +6,8 @@
 
 // @lc code=start
 class Solution {
+    char answer;
+
     public char nextGreatestLetter(char[] letters, char target) {
         int start = 0;
         int end = letters.length - 1;
@@ -16,8 +18,9 @@ class Solution {
             } else {
                 end = mid - 1;
             }
-            return letters[start % letters.length];
+            answer = letters[start % letters.length];
         }
+        return answer;
     }
 }
 // @lc code=end
